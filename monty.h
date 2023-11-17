@@ -7,10 +7,9 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-
-/*****************************************************************************/
-/***********************		Monty Data Structure		******************/
-/*****************************************************************************/
+/***********************************************************************/
+/******************		Monty Data Structure		********************/
+/***********************************************************************/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -70,34 +69,5 @@ void free_stack(stack_t **stack);
 int usage_err(int flag);
 int open_err(char *fname);
 int util_err(int flag, unsigned int lineNo);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif /* __MONTY_H__ */
