@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in {00..22}; do
+	touch "$i.m"
+done
