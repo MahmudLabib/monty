@@ -95,7 +95,7 @@ int execute(stack_t **stack, char **token, unsigned int lineNo)
 
 
 	free_stack(stack);
-	fprintf(stderr, "L%i: unknown instruction %s", lineNo, token[0]);
+	fprintf(stderr, "L%i: unknown instruction %s\n", lineNo, token[0]);
 	return (EXIT_FAILURE);
 }
 
