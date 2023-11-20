@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 
 /**
  * usage_err - Error function prints usage error message

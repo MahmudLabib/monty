@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 
 /**
  * monty_run - Function that gets the line from the file
@@ -8,9 +8,7 @@
 int monty_run(FILE *file)
 {
 	stack_t *stack = NULL;
-	char *line = NULL;
-	char **token = NULL;
-	char delimeter[] = " \n\t\a\b";
+	char *line = NULL, **token = NULL, delimeter[] = " \n\t\a\b";
 	size_t len = 0, mode = 1;
 	unsigned int line_num = 0, exit_status = EXIT_SUCCESS;
 
@@ -21,7 +19,7 @@ int monty_run(FILE *file)
 			continue;
 		token = tokening(line, delimeter);
 		if (token[0][0] == '#' || strcmp(token[0], "nop") == 0)
-		{
+		{ّ
 			free(token);
 			continue;
 		}
@@ -52,7 +50,7 @@ int monty_run(FILE *file)
 */
 char **tokening(char *line, char *delimeter)
 {
-		char **token = NULL, *toks = NULL;
+	char **token = NULL, *toks = NULL;
 	size_t buffer_size = 0;
 	int i = 0;
 
@@ -61,14 +59,12 @@ char **tokening(char *line, char *delimeter)
 		printf("In Tok fun 0");
 		return (NULL);
 	}
-
 	buffer_size = strlen(line);
 	if (buffer_size == 0)
 	{
 		printf("In Tok fun 1");
 		return (NULL);
 	}
-
 	token = malloc(buffer_size * sizeof(char *));
 	if (token == NULL)
 	{

@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 
 /**
  * main - Monty Interpreter program
