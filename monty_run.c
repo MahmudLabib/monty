@@ -19,7 +19,7 @@ int monty_run(FILE *file)
 			continue;
 		token = tokening(line, delimeter);
 		if (token[0][0] == '#' || strcmp(token[0], "nop") == 0)
-		{ّ
+		{
 			free(token);
 			continue;
 		}
