@@ -85,7 +85,7 @@ int execute(stack_t **stack, char **token, unsigned int lineNo)
 		{"pop", monty_pop},
 		{"null", NULL}
 	};
-	for (; i < 2; i++)
+	for (; i < 4; i++)
 	{
 		if (strcmp(op[i].opcode, token[0]) == 0)
 		{
