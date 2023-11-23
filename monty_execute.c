@@ -82,6 +82,7 @@ int execute(stack_t **stack, char **token, unsigned int lineNo)
 	instruction_t op[] = {
 		{"pall", monty_pall},
 		{"pint", monty_pint},
+		{"pop", monty_pop},
 		{"null", NULL}
 	};
 	for (; i < 2; i++)

@@ -37,6 +37,26 @@ void monty_pint(stack_t **stack, unsigned int line_number)
 	}
 	printf("%d\n", ptr->n);
 }
-/* void monty_pop(stack_t **stack, unsigned int line_number); */
+/**
+ * monty_pop - Funciton that removes the top element of the stack
+ * @stack: struct stack hold the data, points to the top of stack
+ * @line_number: Number of the line
+ * Return: void
+*/
+void monty_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr = *stack;
+
+	if (ptr == NULL)
+	{
+		util_err(6, line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	if (ptr->next)
+		ptr->next->prev = ptr->prev;
+	*stack = ptr->next;
+	free(ptr);
+}
 /* void monty_swap(stack_t **stack, unsigned int line_number); */
 /* void monty_add(stack_t **stack, unsigned int line_number); */
