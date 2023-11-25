@@ -77,4 +77,22 @@ void monty_swap(stack_t **stack, unsigned int line_number)
 	(*stack)->n = (*stack)->next->n;
 	(*stack)->next->n = v;
 }
-/* void monty_add(stack_t **stack, unsigned int line_number); */
+/**
+ * monty_add - Funciton that adds the top two elements of the stack
+ * @stack: struct stack hold the data, points to the top of stack
+ * @line_number: Number of the line
+ * Return: void
+*/
+void monty_add(stack_t **stack, unsigned int line_number)
+{
+	int add = 0;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		util_err(8, line_number);
+		exit(EXIT_FAILURE);
+	}
+	add = (*stack)->n + (*stack)->next->n;
+	(*stack)->next->n = add;
+	monty_pop(stack, line_number);
+}

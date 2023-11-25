@@ -66,6 +66,7 @@ int execute(stack_t **stack, char **token, unsigned int lineNo)
 		{"pint", monty_pint},
 		{"pop", monty_pop},
 		{"swap", monty_swap},
+		{"add", monty_add},
 		{"null", NULL}
 	};
 	for (; i < 4; i++)
