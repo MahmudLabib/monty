@@ -75,8 +75,8 @@ void monty_swap(stack_t **stack, unsigned int line_number)
 		util_err(7, line_number);
 		exit(EXIT_FAILURE);
 	}
-	v = p2->n;
-	p2->n = p1->n;
-	p1->n = v;
+	v = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = v;
 }
 /* void monty_add(stack_t **stack, unsigned int line_number); */
