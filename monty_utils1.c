@@ -67,18 +67,15 @@ void monty_pop(stack_t **stack, unsigned int line_number)
 void monty_swap(stack_t **stack, unsigned int line_number)
 {
 	int temp;
-	stack_t *ptr = *stack;
-	stack_t *ptr2 = ptr->next;
 
-	if (!ptr && !ptr2)
+	if (*stack || (*stack)->next->n)
 	{
 		util_err(7, line_number);
 		exit(EXIT_FAILURE);
 	}
 
-	temp = ptr->n;
-	ptr->n = ptr2->n;
-	ptr2->n = temp;
-
+	temp = (*stack)->next->n;
+	(*stack)->next->n = (*stack)->n;
+	(*stack)->n = temp;
 }
 /* void monty_add(stack_t **stack, unsigned int line_number); */
