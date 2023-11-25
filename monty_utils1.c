@@ -70,7 +70,7 @@ void monty_swap(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		f_errors(3, line_number);
+		f_errors(7, line_number);
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*stack)->next->n;
