@@ -69,7 +69,7 @@ int execute(stack_t **stack, char **token, unsigned int lineNo)
 		{"add", monty_add},
 		{"null", NULL}
 	};
-	for (; i < 4; i++)
+	for (; i < 5; i++)
 	{
 		if (strcmp(op[i].opcode, token[0]) == 0)
 		{
