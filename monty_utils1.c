@@ -67,8 +67,6 @@ void monty_pop(stack_t **stack, unsigned int line_number)
 void monty_swap(stack_t **stack, unsigned int line_number)
 {
 	int v;
-	stack_t *p1 = *stack;
-	stack_t *p2 = (*stack)->next;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
