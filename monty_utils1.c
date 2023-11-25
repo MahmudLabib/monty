@@ -58,5 +58,27 @@ void monty_pop(stack_t **stack, unsigned int line_number)
 	*stack = ptr->next;
 	free(ptr);
 }
-/* void monty_swap(stack_t **stack, unsigned int line_number); */
+/**
+ * monty_swap - Funciton that swap top two elements of the stack
+ * @stack: struct stack hold the data, points to the top of stack
+ * @line_number: Number of the line
+ * Return: void
+*/
+void monty_swap(stack_t **stack, unsigned int line_number)
+{
+	int temp;
+	stack_t *ptr = *stack;
+	stack_t *ptr2 = ptr->next;
+
+	if (!ptr && !ptr2)
+	{
+		util_err(7, line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	temp = ptr->n;
+	ptr->n = ptr2->n;
+	ptr2->n = temp;
+
+}
 /* void monty_add(stack_t **stack, unsigned int line_number); */

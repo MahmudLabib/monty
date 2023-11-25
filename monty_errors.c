@@ -33,7 +33,8 @@ int util_err(int flag, unsigned int lineNo)
 	char *err[] = {"usage: push integer", "can\'t pint, stack empty",
 		"can\'t pop an empty stack", "can't swap, stack too short",
 		"can\'t add, stack too short", "can\'t pint, stack empty",
-		"can\'t pop an empty stack"};
+		"can\'t pop an empty stack", "can't swap, stack too short",
+		"can't add, stack too short"};
 	fprintf(stderr, "L%d: %s\n", lineNo, err[flag]);
 	return (EXIT_FAILURE);
 }

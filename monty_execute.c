@@ -60,29 +60,12 @@ int push_stack(stack_t **stack, char **token, unsigned int lineNo)
 int execute(stack_t **stack, char **token, unsigned int lineNo)
 {
 	unsigned int i = 0;
-	/*
-	 *	instruction_t op[] = {
-	 *	{"pall", monty_pall},
-	 *	{"pint", monty_pint},
-	 *	{"pop", monty_pop},
-	 *	{"swap", monty_swap},
-	 *	{"add", monty_add},
-	 *	{"null", NULL}
-	};
-	for (; i < 6; i++)
-	{
-		if (strcmp(op[i].opcode, token[0]) == 0)
-		{
-			op[i].f(stack, lineNo);
-			return (EXIT_SUCCESS);
-		}
-	}
-	*/
 
 	instruction_t op[] = {
 		{"pall", monty_pall},
 		{"pint", monty_pint},
 		{"pop", monty_pop},
+		{"swap", monty_swap},
 		{"null", NULL}
 	};
 	for (; i < 4; i++)
